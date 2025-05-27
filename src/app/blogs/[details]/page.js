@@ -27,6 +27,10 @@ export default function details({params}){
 
     return(
         <div>
+            <div className="w-[250px] mx-auto bg-gray-200">
+              <img className="aspect-video" src={blogs?.img} width="100%" />
+            </div>
+
             <h1 className="text-2xl font-bold">{blogs?.title}</h1>
             <p className="text-lg mt-5">{blogs?.description}</p>
 

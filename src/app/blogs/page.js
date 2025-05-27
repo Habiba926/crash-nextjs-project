@@ -23,7 +23,8 @@ export default function page() {
   }
 
   useEffect(() => {
-    fetchData();
+    fetchData()
+
   }, []);
   return (
     <div>

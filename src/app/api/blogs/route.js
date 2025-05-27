@@ -19,9 +19,9 @@ export async function POST(req){
     try {
         await dbConnect();
         
-        const {title, description} = await req.json();
+        const {title, description, picture} = await req.json();
 
-        await Blog.create({title, description});
+        await Blog.create({img: picture.url, imgId: picture.publicId, title, description});
 
         return NextResponse.json({message: 'Blog uploaded...!'});
     } catch (error) {
